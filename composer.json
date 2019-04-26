@@ -1,0 +1,26 @@
+{
+    "name": "werxe/php-cs-fixer-config",
+    "description": "PHP CS Fixer configuration for Werxe projects",
+    "keywords": [
+        "php",
+        "werxe",
+        "cs-fixer"
+    ],
+    "homepage": "https://werxe.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Werxe",
+            "email": "hello@werxe.com",
+            "homepage": "https://werxe.com"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Werxe\\PhpCsFixer\\": "src"
+        }
+    }
+}
