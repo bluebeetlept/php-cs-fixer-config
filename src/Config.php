@@ -2,8 +2,6 @@
 
 namespace Werxe\PhpCsFixer;
 
-use PhpCsFixer\Finder;
-
 class Config extends \PhpCsFixer\Config
 {
     /**
