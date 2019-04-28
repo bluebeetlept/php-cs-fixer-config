@@ -15,7 +15,7 @@ class Config extends \PhpCsFixer\Config
     {
         parent::__construct('werxe');
 
-        $this->setUsingCache(false)->setRiskyAllowed(true);
+        $this->setRiskyAllowed(true);
     }
 
     /**
