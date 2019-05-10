@@ -73,6 +73,7 @@ class Config extends \PhpCsFixer\Config
                 'strategy' => 'new_line_for_chained_calls',
             ],
             'native_function_invocation' => false,
+            'native_function_type_declaration_casing' => true,
             'no_alternative_syntax' => true,
             'no_extra_blank_lines' => [
                 'tokens' => [
@@ -87,14 +88,17 @@ class Config extends \PhpCsFixer\Config
             'no_trailing_comma_in_singleline_array' => true,
             'no_unreachable_default_argument_value' => true,
             'no_unused_imports' => true,
+            'no_unset_cast' => true,
             'no_useless_else' => true,
             'no_useless_return' => true,
             'ordered_class_elements' => false,
             'ordered_imports' => ['sortAlgorithm' => 'length'],
+            'ordered_interfaces' => ['direction' => 'ascend', 'order' => 'alpha'],
             'protected_to_private' => false,
             'return_assignment' => true,
             'semicolon_after_instruction' => true,
             'simplified_null_return' => false,
+            'single_trait_insert_per_statement' => false,
             'short_scalar_cast' => true,
             'strict_comparison' => false,
             'ternary_to_null_coalescing' => true,
@@ -133,6 +137,7 @@ class Config extends \PhpCsFixer\Config
                 'null_adjustment' => 'always_last',
                 'sort_algorithm' => 'none',
             ],
+            'phpdoc_var_annotation_correct_order' => true,
             'phpdoc_var_without_name' => true,
 
             'no_empty_comment' => false,
