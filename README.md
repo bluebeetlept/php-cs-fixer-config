@@ -16,10 +16,13 @@ Now that the package is installed, create a configuration file called `.php_cs` 
 
 ```php
 <?php
+
 // Create a new CS Fixer Finder instance
 $finder = PhpCsFixer\Finder::create()->in(__DIR__);
 
-return Werxe\PhpCsFixer\Config::create()->setFinder($finder);
+return Werxe\PhpCsFixer\Config::create()
+    ->setFinder($finder)
+;
 ```
 
 ### Ignoring files and/or directories
@@ -32,6 +35,7 @@ Here's a simple example where we ignore both files and directories:
 
 ```php
 <?php
+
 // Directories to not scan
 $excludeDirs = [
     'vendor/',
@@ -52,7 +56,9 @@ $finder = PhpCsFixer\Finder::create()
     })
 ;
 
-return Werxe\PhpCsFixer\Config::create()->setFinder($finder);
+return Werxe\PhpCsFixer\Config::create()
+    ->setFinder($finder)
+;
 ```
 
 ### Enforce coding standards for PHPUnit tests
@@ -61,15 +67,19 @@ If you would like to also enable coding standards on your tests, you can call th
 
 ```php
 <?php
+
 // Create a new CS Fixer Finder instance
 $finder = PhpCsFixer\Finder::create()->in(__DIR__);
 
-return Werxe\PHPCsFixer\Config::create()->setFinder($finder)->withPHPUnitRules();
+return Werxe\PHPCsFixer\Config::create()
+    ->setFinder($finder)
+    ->withPHPUnitRules()
+;
 ```
 
 ## Contributing
 
-Thank you for your interest in Skeleton. Here are some of the many ways to contribute.
+Thank you for your interest in PHP CS Fixer Config. Here are some of the many ways to contribute.
 
 - Check out our [contributing guide](/.github/CONTRIBUTING.md)
 - Look at our [code of conduct](/.github/CODE_OF_CONDUCT.md)
@@ -80,4 +90,4 @@ If you discover any security related issues, please email security@werxe.com ins
 
 ## License
 
-PHP CS Fixer Config  is licenced under the MIT License (MIT). Please see the [license file](LICENSE) for more information.
+PHP CS Fixer Config is licenced under the MIT License (MIT). Please see the [license file](LICENSE) for more information.
