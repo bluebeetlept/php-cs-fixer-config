@@ -50,15 +50,14 @@ $excludeFiles = [
 $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__)
     ->exclude($excludeDirs)
-    ->ignoreDotFiles(true)->ignoreVCS(true)
+    ->ignoreDotFiles(true)
+    ->ignoreVCS(true)
     ->filter(function (\SplFileInfo $file) use ($excludeFiles) {
         return ! in_array($file->getRelativePathName(), $excludeFiles);
     })
 ;
 
-return Werxe\PhpCsFixer\Config::create()
-    ->setFinder($finder)
-;
+return Werxe\PhpCsFixer\Config::create()->setFinder($finder);
 ```
 
 ### Enforce coding standards for PHPUnit tests
