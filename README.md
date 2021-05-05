@@ -20,7 +20,7 @@ Now that the package is installed, create a configuration file called `.php_cs` 
 // Create a new CS Fixer Finder instance
 $finder = PhpCsFixer\Finder::create()->in(__DIR__);
 
-return Werxe\PhpCsFixer\Config::create()
+return (new Werxe\PhpCsFixer\Config())
     ->setFinder($finder)
 ;
 ```
@@ -57,7 +57,9 @@ $finder = PhpCsFixer\Finder::create()
     })
 ;
 
-return Werxe\PhpCsFixer\Config::create()->setFinder($finder);
+return (new Werxe\PhpCsFixer\Config())
+    ->setFinder($finder)
+;
 ```
 
 ### Enforce coding standards for PHPUnit tests
@@ -70,7 +72,7 @@ If you would like to also enable coding standards on your tests, you can call th
 // Create a new CS Fixer Finder instance
 $finder = PhpCsFixer\Finder::create()->in(__DIR__);
 
-return Werxe\PHPCsFixer\Config::create()
+return (new Werxe\PhpCsFixer\Config())
     ->setFinder($finder)
     ->withPHPUnitRules()
 ;
